@@ -28,11 +28,15 @@ namespace SP_HW1_Task5
             Data = AppDomain.CreateDomain("Data");
             Graphic = AppDomain.CreateDomain("Graphic");
 
-            DataAsm = Data.Load(AssemblyName.GetAssemblyName("WindowsFormsApp1.exe"));
-            GraphicAsm = Graphic.Load(AssemblyName.GetAssemblyName("WindowsFormsApp2.exe"));
+            DataAsm = Data.Load(AssemblyName.GetAssemblyName("WindowsFormsApp2.exe"));
+            GraphicAsm = Graphic.Load(AssemblyName.GetAssemblyName("WindowsFormsApp1.exe"));
+            GraphicWnd = Activator.CreateInstance(GraphicAsm.GetType("WindowsFormsApp1.Form1")) as Form;
 
-            DataWnd = Activator.CreateInstance(DataAsm.GetType("WindowsFormsApp1.Form1")) as Form;
-            GraphicWnd = Activator.CreateInstance(GraphicAsm.GetType("WindowsFormsApp2.Form1")) as Form;
+            DataWnd = Activator.CreateInstance(DataAsm.GetType("WindowsFormsApp2.Form1"),
+                new object[] { 
+                    GraphicAsm.GetModule("WindowsFormsApp1.exe"),
+                    GraphicWnd
+                }) as Form;
 
             (new Thread(new ThreadStart(RunData))).Start();
             (new Thread(new ThreadStart(RunGraphic))).Start();

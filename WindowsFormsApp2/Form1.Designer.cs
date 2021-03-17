@@ -108,7 +108,10 @@ namespace WindowsFormsApp2
             this.Monday_txbx.Name = "Monday_txbx";
             this.Monday_txbx.Size = new System.Drawing.Size(51, 20);
             this.Monday_txbx.TabIndex = 7;
+            this.Monday_txbx.Text = "0";
             this.Monday_txbx.TextChanged += new System.EventHandler(this.TextBox_txbx_TextChanged);
+            this.Monday_txbx.Enter += new System.EventHandler(this.TextBox_txbx_Enter);
+            this.Monday_txbx.Leave += new System.EventHandler(this.TextBox_txbx_Leave);
             // 
             // Tuesday_txbx
             // 
@@ -116,7 +119,10 @@ namespace WindowsFormsApp2
             this.Tuesday_txbx.Name = "Tuesday_txbx";
             this.Tuesday_txbx.Size = new System.Drawing.Size(51, 20);
             this.Tuesday_txbx.TabIndex = 8;
+            this.Tuesday_txbx.Text = "0";
             this.Tuesday_txbx.TextChanged += new System.EventHandler(this.TextBox_txbx_TextChanged);
+            this.Tuesday_txbx.Enter += new System.EventHandler(this.TextBox_txbx_Enter);
+            this.Tuesday_txbx.Leave += new System.EventHandler(this.TextBox_txbx_Leave);
             // 
             // Wednesday_txbx
             // 
@@ -124,7 +130,10 @@ namespace WindowsFormsApp2
             this.Wednesday_txbx.Name = "Wednesday_txbx";
             this.Wednesday_txbx.Size = new System.Drawing.Size(51, 20);
             this.Wednesday_txbx.TabIndex = 9;
+            this.Wednesday_txbx.Text = "0";
             this.Wednesday_txbx.TextChanged += new System.EventHandler(this.TextBox_txbx_TextChanged);
+            this.Wednesday_txbx.Enter += new System.EventHandler(this.TextBox_txbx_Enter);
+            this.Wednesday_txbx.Leave += new System.EventHandler(this.TextBox_txbx_Leave);
             // 
             // Thursday_txbx
             // 
@@ -132,7 +141,10 @@ namespace WindowsFormsApp2
             this.Thursday_txbx.Name = "Thursday_txbx";
             this.Thursday_txbx.Size = new System.Drawing.Size(51, 20);
             this.Thursday_txbx.TabIndex = 10;
+            this.Thursday_txbx.Text = "0";
             this.Thursday_txbx.TextChanged += new System.EventHandler(this.TextBox_txbx_TextChanged);
+            this.Thursday_txbx.Enter += new System.EventHandler(this.TextBox_txbx_Enter);
+            this.Thursday_txbx.Leave += new System.EventHandler(this.TextBox_txbx_Leave);
             // 
             // Friday_txbx
             // 
@@ -140,7 +152,10 @@ namespace WindowsFormsApp2
             this.Friday_txbx.Name = "Friday_txbx";
             this.Friday_txbx.Size = new System.Drawing.Size(51, 20);
             this.Friday_txbx.TabIndex = 11;
+            this.Friday_txbx.Text = "0";
             this.Friday_txbx.TextChanged += new System.EventHandler(this.TextBox_txbx_TextChanged);
+            this.Friday_txbx.Enter += new System.EventHandler(this.TextBox_txbx_Enter);
+            this.Friday_txbx.Leave += new System.EventHandler(this.TextBox_txbx_Leave);
             // 
             // Saturday_txbx
             // 
@@ -148,15 +163,22 @@ namespace WindowsFormsApp2
             this.Saturday_txbx.Name = "Saturday_txbx";
             this.Saturday_txbx.Size = new System.Drawing.Size(51, 20);
             this.Saturday_txbx.TabIndex = 12;
+            this.Saturday_txbx.Text = "0";
             this.Saturday_txbx.TextChanged += new System.EventHandler(this.TextBox_txbx_TextChanged);
+            this.Saturday_txbx.Enter += new System.EventHandler(this.TextBox_txbx_Enter);
+            this.Saturday_txbx.Leave += new System.EventHandler(this.TextBox_txbx_Leave);
             // 
             // Sunday_txbx
             // 
+            this.Sunday_txbx.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Sunday_txbx.Location = new System.Drawing.Point(112, 232);
             this.Sunday_txbx.Name = "Sunday_txbx";
             this.Sunday_txbx.Size = new System.Drawing.Size(51, 20);
             this.Sunday_txbx.TabIndex = 13;
+            this.Sunday_txbx.Text = "0";
             this.Sunday_txbx.TextChanged += new System.EventHandler(this.TextBox_txbx_TextChanged);
+            this.Sunday_txbx.Enter += new System.EventHandler(this.TextBox_txbx_Enter);
+            this.Sunday_txbx.Leave += new System.EventHandler(this.TextBox_txbx_Leave);
             // 
             // Send_btn
             // 
@@ -166,6 +188,7 @@ namespace WindowsFormsApp2
             this.Send_btn.TabIndex = 14;
             this.Send_btn.Text = "Send data";
             this.Send_btn.UseVisualStyleBackColor = true;
+            this.Send_btn.Click += new System.EventHandler(this.Send_btn_Click);
             // 
             // Form1
             // 
